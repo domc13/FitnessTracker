@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 from rest_framework import serializers
+from .models import Workout
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -11,4 +12,10 @@ class UserSerializer(serializers.ModelSerializer):
         user = User.objects.create_user(**validated_data)
         return user
     
+class WorkoutSerializer(serializers.ModelSerializer):
+    class Meta: 
+        model = Workout
+        fields = ["id", "exercise_name", "date", "calories", "time_worked_out", "author"]
+        extra_kwargs = {"author": {"read_only": True}}
+
     
