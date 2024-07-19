@@ -1,0 +1,25 @@
+.workout-dashboard {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  gap: 70px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.dashboard-item {
+  text-align: center;
+}
+
+.dashboard-item h3 {
+  margin: 0;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.dashboard-item p {
+  font-size: 1.5em;
+  color: #000;
+}
