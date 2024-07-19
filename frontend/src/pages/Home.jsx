@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import api from "../api"
+import Workout from "../components/Workout"
 
 function Home() {
   const [workouts, setWorkouts] = useState([]);
@@ -82,6 +83,11 @@ function Home() {
     </form>
     <div>
       <h2>Workout Log</h2>
+      <div className="workout-log-container">
+        {workouts.map((workout) => (
+          <Workout workout={workout} onDelete={deleteWorkout} key={workout.id} />
+        ))}
+      </div>
     </div>
   </div>
 }
