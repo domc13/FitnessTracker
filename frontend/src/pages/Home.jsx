@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import api from "../api"
 import Workout from "../components/Workout"
+import "../styles/Home.css"
 
 function Home() {
   const [workouts, setWorkouts] = useState([]);
@@ -84,6 +85,12 @@ function Home() {
     <div>
       <h2>Workout Log</h2>
       <div className="workout-log-container">
+        <div className="workout-log-container-header">
+          <h3>Exercise Name</h3>
+          <h3>Calories Burned</h3>
+          <h3>Workout Duration</h3>
+          <h3>Date</h3>
+        </div>
         {workouts.map((workout) => (
           <Workout workout={workout} onDelete={deleteWorkout} key={workout.id} />
         ))}

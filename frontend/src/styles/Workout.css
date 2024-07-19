@@ -8,6 +8,18 @@
   border-radius: 5px;
 }
 
+.workout-name, 
+.workout-calories, 
+.workout-duration, 
+.workout-date {
+  flex: none;
+  text-align: center;
+  width: 20%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .workout-name {
   color: #333;
 }

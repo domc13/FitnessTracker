@@ -1,0 +1,17 @@
+.workout-log-container-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1px;
+  margin: 5px 0;
+  width: 90%;
+}
+
+.workout-log-container-header h3 {
+  flex: none;
+  text-align: center;
+  width: 20%; /* Adjust the width as needed */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
