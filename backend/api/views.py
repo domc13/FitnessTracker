@@ -15,6 +15,7 @@ class WorkoutListCreate(generics.ListCreateAPIView):
         return Workout.objects.filter(author=user)
     
     def perform_create(self, serializer):
+        print(self.request.data)
         if serializer.is_valid():
             serializer.save(author=self.request.user)
         else:
